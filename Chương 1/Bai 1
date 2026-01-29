@@ -1,0 +1,23 @@
+public class Test<T>{
+    private T value;
+    
+    public void set(T t){
+        this.value = t;
+    }
+    
+    public T get(){
+        return value;
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Test<Integer> intTest = new Test<>();
+        intTest.set(123);
+        System.out.println("Gia tri get tu Intest: " + intTest.get());
+        
+        Test<String> stringTest = new Test<>();
+        stringTest.set("Xin chao!");
+        System.out.println("Gia tri get tu stringTest: " + stringTest.get());
+    }
+}
